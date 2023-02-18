@@ -1,0 +1,177 @@
+const api_key = "&api_key=afd9086e3c061313176661d70983f827";
+const URL = "https://api.themoviedb.org/discover/movie?primary_release_date.gte=2022-11-30&primary_release_date.lte=2023-1-1&api_key=afd9086e3c061313176661d70983f827"  
+
+const popularMovies = "https://api.themoviedb.org/3/trending/movie/day?api_key=afd9086e3c061313176661d70983f827"
+
+const posterURL = "https://image.tmdb.org/t/p/original"
+const posterPath = "https://image.tmdb.org/t/p/original/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg
+const search = "https://api.themoviedb.org/3/search=avatar&api_key=afd9086e3c061313176661d70983f827"
+
+Data with Genre = "https://api.themoviedb.org/3/discover/movie?api_key=afd9086e3c061313176661d70983f827&with_genres=16" 
+
+language = https://api.themoviedb.org/3/configuration/languages?api_key=afd9086e3c061313176661d70983f827
+
+languageNames.of
+
+MultiSearch = https://api.themoviedb.org/3/search/multi?api_key=<<api_key>>&language=en-US&query=Jumanji
+
+key={navSearch} genre={navSearch}
+
+https://imdb-clone-py.vercel.app/
+
+★★★★★★
+
+
+**********************************************************************************************************************
+
+import './App.css';
+import Main from './Components/Main';
+import Navbar from './Components/Navbar';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Search from './Components/Search';
+import LoadingBar from 'react-top-loading-bar'
+import { useState } from 'react';
+import MovieDetails from './Components/MovieDetails';
+
+function App() {
+
+  const [progress, setProgress] = useState(0)
+
+  return (
+    <>
+    <BrowserRouter>
+    <Navbar/>
+    <LoadingBar
+					color='red'
+					progress={progress}
+				  onLoaderFinished={() => setProgress(0)} 
+		/>
+    <Routes>
+    <Route exact path='*' element={<Main setProgress={setProgress} category={"now_playing"} key="nowplaying" genre={"Now Playing"}/>}/>
+    <Route exact path='/popular' element={<Main setProgress={setProgress} category={"popular"} key="popular" genre={"Popular"}/>}/>
+    <Route exact path='/toprated' element={<Main setProgress={setProgress} category={"top_rated"} key="toprated" genre={"Top Rated"}/>}/>
+    <Route exact path='/upcoming' element={<Main setProgress={setProgress} category={"upcoming"} key="upcoming" genre={"Upcoming"}/>}/>
+    <Route exact path='/movie/:movieId' element={<MovieDetails setProgress={setProgress} key="movie"/>}/>
+    <Route exact path='/search' element={<Search setProgress={setProgress} key="search"/>}/>
+    </Routes>
+    </BrowserRouter>  
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+
+***********************************************************************************************************
+
+import React, { useEffect, useState } from "react";
+import MoviesCard from "./MoviesCard";
+import InfiniteScroll from 'react-infinite-scroll-component';
+import CarouItem from "./CarouItem";
+import './style.css'
+import Spinner from './Spinner'
+
+export default function Main(props) {
+    const api_key = "afd9086e3c061313176661d70983f827"
+    const [moviesData, setMoviesData] = useState([]);
+    const [page, setPage] = useState(1);
+    const [totalResult, setTotalResult] = useState(0);
+    const [carou, setCarou] = useState([]);
+
+    const languageNames = new Intl.DisplayNames(['en'], {
+        type: 'language'
+    });
+
+    const fetchData = async () => {
+        props.setProgress(10);
+        const url = `https://api.themoviedb.org/3/movie/${props.category}?api_key=${api_key}&page=${page}`;
+        props.setProgress(30);
+        const data = await fetch(url);
+        props.setProgress(40);
+        const parsedData = await data.json();
+        props.setProgress(80);
+        setMoviesData(parsedData.results);
+        setCarou(parsedData.results);
+        props.setProgress(90);
+        setTotalResult(parsedData.total_results);
+        console.log(parsedData);
+        props.setProgress(100);
+    }
+
+    useEffect(() => {
+        fetchData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
+    const fetchMoreData = async () => {
+        const url = `https://api.themoviedb.org/3/movie/${props.category}?api_key=${api_key}&page=${page+1}`;
+        const data = await fetch(url);
+        const parsedData = await data.json();
+        setMoviesData(moviesData.concat(parsedData.results));
+        setPage(page+1);
+        setTotalResult(parsedData.total_results);
+        console.log(parsedData);
+    }
+
+    return (
+        <>
+            <div className="genTitle">Category: {props.genre}</div>
+            <CarouItem carou={carou} />
+            <div className="main">
+                <InfiniteScroll
+                    dataLength={moviesData.length}
+                    next={fetchMoreData}
+                    hasMore={totalResult >= moviesData.length}
+                    loader={<Spinner/>}
+                >
+                    <div className="cont">
+                        <div className="row">
+                            {moviesData.map((element, index) => {
+                                return (<MoviesCard key={index} id={element.id} index={index} poster={element.poster_path} movieTitle={element.title} rating={element.vote_average} overview={element.overview} date={element.release_date} language={languageNames.of(element.original_language)} />)
+                            })}
+                        </div>
+                    </div>
+                </InfiniteScroll>
+            </div>
+        </>
+    )
+}
+
+******************************************************************************************************
+
+import React from 'react'
+import { Link } from 'react-router-dom'
+import './style.css'
+
+export default function Navbar() {
+
+    return (
+        <div className='navbar'>
+            <div style={{width:"15%"}}><Link to="/" className="title">MoviesInfo</Link></div>
+            <div className="categories" style={{width:"60%",display:"flex",justifyContent:"flex-start"}}>
+                <ul>
+                    <Link className='navItem' to='/'>Now Playing</Link>
+                    <Link className='navItem' to='/popular'>Popular</Link>
+                    <Link className='navItem' to='/toprated'>Top Rated</Link>
+                    <Link className='navItem' to='/upcoming'>Upcoming</Link>
+                </ul>
+            </div>
+            <div className="searchCont">
+            <Link className="search" to='/search'>Search for Movies</Link></div>
+        </div>  
+    )   
+}
+
+*****************************************************************************************************************
+const getDate = (date) => {
+        let newDate = date.slice(8, 10);
+
+        const monthArray = { "01": "Jan", "02": "Feb", "03": "Mar", "04": "Apr", "05": "May", "06": "Jun", "07": "Jul", "08": "Aug", "09": "Sep", "10": "Oct", "11": "Nov", "12": "Dec" };
+
+        newDate = newDate + " " + monthArray[date.slice(5, 7)] + " " + date.slice(0, 4);
+
+        return newDate;
+    }

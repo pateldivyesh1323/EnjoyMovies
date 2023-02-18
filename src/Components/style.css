@@ -1,0 +1,466 @@
+.navbar {
+    background-color: black;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+}
+
+.menu{
+    display: none;
+}
+.menuOptionCont{
+    display: none;
+}
+
+.title {
+    color: white;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.categories {
+    color: white;
+    font-size: 17px;
+}
+
+.navItem {
+    display: inline;
+    margin: 0px 0px 20px 20px;
+    text-decoration: none;
+    color: #dcdcdc;
+}
+
+.navItem:hover {
+    text-decoration: underline;
+    color: #ff2525;
+}
+.magnifyingGlass{
+    display: none;
+}
+
+.main {
+    background-color: black;
+    height: max-content;
+}
+
+.genTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 23px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(26, 25, 25);
+    opacity: 1;
+    position: sticky;
+    top: 70px;
+    z-index: 5;
+}
+.genTitle2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 23px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(26, 25, 25);
+    opacity: 1;
+    position: sticky;
+    top: 70px;
+    z-index: 5;
+}
+
+.posterImage {
+    height: 80%;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.cont {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    row-gap:20px;
+    column-gap: 10px;
+    width: 100%;
+}
+.myCard {
+    border: 1px solid khaki;
+    background-color: black;
+    color: white;
+    width: 215px;
+    height: 300px;
+    box-shadow: 15px 15px 15px black;
+    position: relative;
+    border-radius: 5px;
+}
+
+.myCard:hover {
+    width: 230px;
+    height: 330px;
+}
+.myCardCont{
+    height: 330px; 
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+}
+.movieTitle {
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    text-align: center;
+}
+
+.rating {
+    background-color: #ff2525;
+    display: block;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    position: absolute;
+    right: 0px;
+    bottom: -20px;
+}
+
+.expandIcon {
+    position: absolute;
+    display: inline;
+    right: 0px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.input {
+    margin-right: 25px;
+    width: 444px;
+    height: 25px;
+    padding-left: 15px;
+    border: 2px solid red;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+.input:active {
+    border: 2px solid red;
+}
+
+.carousel {
+    width: 100%;
+    height: 630px;
+    user-select: none;
+}
+
+.carou {
+    width: 100%;
+    height: 650px;
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgba(0, 0, 0, 0.436), rgb(0, 0, 0, 1));
+}
+
+.backgroundImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+}
+
+.carouText {
+    z-index: 1;
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    left: 50px;
+}
+
+.carouName {
+    font-size: 70px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.carouDesc {
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 5px;
+    width: 70%;
+}
+
+.caroudate {
+    font-size: 20px;
+    text-align: left;
+    margin-right: 25px;
+}
+
+.carouRating {
+    font-size: 20px;
+    text-align: left;
+    color: #ff2525;
+    margin-right: 5px;
+}
+
+.carouBox1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.searchCont {
+    display: flex;
+    gap: 20px;
+    flex:0.6;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.toggleSearchCont{
+    display: none;
+    position: absolute;
+    top: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.searchInput {
+    height: 23px;
+    width: 250px;
+    border: 2px solid #ff2525;
+    font-size: 17px;
+    padding-left: 15px;
+    border-radius: 15px;
+}
+.searchInput:focus{
+    outline: none;
+    border: 2px solid black;
+}
+.searchButt {
+    padding: 2px 4px 2px 4px;
+    border: 0px;
+    width: 80px;
+    border-radius: 15px;
+    background-color: #ff2525;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    height: 28px;
+}
+
+.backDropImg {
+    width: 80%;
+    height: 500px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.detailsCont {
+    display: flex;
+    justify-content: center;
+}
+
+.posterImg {
+    width: 320px;
+    height: 410px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 15px black;
+    position: absolute;
+    z-index: 0;
+}
+
+.movieDetails {
+    position: relative;
+    top: 300px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding-bottom: 50px;
+}
+
+.posterCont {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
+.movieDetailsbox1 {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.movieDetailsbox11 {
+    height: 205px;
+    color: white;
+}
+
+.movieDetailsbox12 {
+    height: 205px;
+    color: white;
+}
+
+.movieDetailsTitle {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.movieDetailsTag {
+    font-size: 22px;
+}
+
+.movieDetailsDesc {
+    font-size: 17px;
+}
+
+.movieDetailsRat {
+    font-size: 18px;
+}
+
+.movieDetailsGenCont {
+    display: flex;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+.movieDetailsGen {
+    padding: 5px;
+    margin: 5px;
+    margin-left: 0px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.movieDetailsRat {
+    color: #ff2525;
+    margin: 5px 5px 5px 0px;
+    font-weight: 600;
+}
+
+.movieDetailsDate {
+    margin: 5px 5px 5px 0px;
+}
+
+.movieDetailsStatus {
+    margin: 5px 5px 5px 0px;
+}
+
+.movieDetailsLink {
+    margin-top: 5px;
+    color: white;
+}
+
+.movieDetailsLink1 {
+    color: #ff2525;
+}
+
+.movieDetailsLink1:visited {
+    color: white;
+}
+
+.play {
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* More Images */
+.detailsBackdropImages {
+    width: 270px;
+    height: 180px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.detailImagesCont {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    width: 80%;
+    margin: auto;
+    overflow-x: auto;
+    margin-top: 10px;
+    padding-bottom: 15px;
+}
+
+/* More movie Details */
+.moreMovieDetails {
+    color: white;
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.productionComp {
+    color: white;
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+
+/* Similar Movies */
+.detailSimilarCont {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: auto;
+    overflow-x: auto;
+    padding-top: 20px;
+    height: 380px;
+}
+
+.detailSimilarMov {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.detailSimilarTitle {
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
