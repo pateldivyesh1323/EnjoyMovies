@@ -497,3 +497,484 @@
         padding: 5px;
     }
 }
+
+
+/* Movie Details Media Queries */
+@media only screen and (1200px<=width<=1400px){
+    .backDropImg{
+        width: 83%;
+    }
+    .detailsImageCont{
+        width: 290px;
+        height: 390px;
+    }
+    .posterImg{
+        width: 290px;
+        height: 390px;
+    }
+    .play{
+        width: 60px;
+        height: 60px;
+    }
+    .movieDetails{
+        width: 83%;
+    }
+    .movieDetailsbox11{
+        height: 195px;
+    }
+    .movieDetailsbox12{
+        height: 195px;
+    }
+    .movieDetailsDesc {
+        font-size: 15px;
+    }
+    .detailSimilarCont {
+        height: 345px;
+    }
+    .detailsBox {
+        height: 730px;
+    }
+}
+@media only screen and (900px<=width<=1200px){
+    .backDropImg{
+        width: 90%;
+    }
+    .detailsImageCont{
+        width: 250px;
+        height: 350px;
+    }
+    .posterImg{
+        width: 250px;
+        height: 350px;
+    }
+    .play{
+        width: 55px;
+        height: 55px;
+    }
+    .movieDetails{
+        width: 90%;
+    }
+    .movieDetailsbox11{
+        height: 175px;
+    }
+    .movieDetailsbox12{
+        height: 175px;
+    }
+    .movieDetailsDesc {
+        font-size: 15px;
+    }
+    .detailSimilarCont {
+        height: 330px;
+    }
+    .detailsBox {
+        height: 710px;
+    }
+    .detailsBackdropImages {
+        width: 250px;
+        height: 170px;
+    }
+    .detailImagesCont{
+        width: 90%;
+    }
+    .detailSimilarMov {
+        width: 90%;
+        margin-top: 20px;
+    }
+    .movieDetailsTitle{
+        font-size: 27px;
+    }
+    .movieDetailsTag {
+        font-size: 20px;
+    }
+    .movieDetailsGenCont{
+        margin: 0px;
+    }
+    .movieDetailsRat{
+        margin: 0px;
+    }
+    .movieDetailsDate{
+        margin: 0px;
+    }
+    .movieDetailsStatus{
+        margin: 0px;
+    }
+    .movieDetailsDesc{
+        font-size: 14px;
+    }
+}
+@media only screen and (720px<=width<=900px){
+    .backDropImg{
+        width: 100%;
+    }
+    .detailsImageCont{
+        width: 230px;
+        height: 330px;
+    }
+    .posterImg{
+        width: 230px;
+        height: 330px;
+    }
+    .play{
+        width: 40px;
+        height: 40px;
+    }
+    .movieDetails{
+        width: 100%;
+    }
+    .backDropImg{
+        height: 460px;
+    }
+    .movieDetailsbox11{
+        height: 165px;
+    }
+    .movieDetailsbox12{
+        height: 165px;
+    }
+    .movieDetailsDesc {
+        font-size: 14px;
+    }
+    .detailSimilarCont {
+        height: 310px;
+    }
+    .detailsBox {
+        height: 650px;
+    }
+    .detailsBackdropImages {
+        width: 210px;
+        height: 150px;
+    }
+    .detailImagesCont{
+        width: 95%;
+    }
+    .detailSimilarMov {
+        width: 95%;
+        margin-top: 0px;
+    }
+    .productionComp{
+        font-size: 16px;
+        width: 90%;
+    }
+    .moreMovieDetails{
+        font-size: 16px;
+        width: 90%;
+    }
+    .movieDetailsTitle{
+        font-size: 27px;
+    }
+    .movieDetailsTag {
+        font-size: 20px;
+    }
+    .movieDetailsGenCont{
+        margin: 0px;
+    }
+    .movieDetailsRat{
+        margin: 0px;
+    }
+    .movieDetailsDate{
+        margin: 0px;
+    }
+    .movieDetailsStatus{
+        margin: 0px;
+    }
+    .movieDetailsDesc{
+        font-size: 14px;
+    }
+}
+@media only screen and (600px<=width<=720px){
+    .backDropImg{
+        width: 100%;
+        height: 390px;
+    }
+    .detailsImageCont{
+        width: 180px;
+        height: 280px;
+    }
+    .posterImg{
+        width: 180px;
+        height: 280px;
+    }
+    .play{
+        width: 40px;
+        height: 40px;
+    }
+    .movieDetails{
+        width: 100%;
+        top: 230px;
+    }
+    .movieDetailsbox11{
+        height: 140px;
+    }
+    .movieDetailsbox12{
+        height: 140px;
+    }
+    .movieDetailsDesc {
+        font-size: 14px;
+    }
+    .detailSimilarCont {
+        height: 310px;
+    }
+    .detailsBox {
+        height: 530px;
+    }
+    .detailsBackdropImages {
+        width: 180px;
+        height: 120px;
+    }
+    .detailImagesCont{
+        width: 95%;
+    }
+    .detailSimilarTitle{
+        font-size: 18px;
+    }
+    .detailSimilarMov {
+        width: 95%;
+        margin-top: 0px;
+    }
+    .detailSimilarCont{
+        padding-top: 0px;
+    }
+    .productionComp{
+        font-size: 14px;
+        width: 90%;
+    }
+    .moreMovieDetails{
+        font-size: 14px;
+        width: 90%;
+    }
+    .movieDetailsTitle{
+        font-size: 20px;
+    }
+    .movieDetailsTag {
+        font-size: 17px;
+    }
+    .movieDetailsGen{
+        margin: 0px 5px 0px 0px;
+    }
+    .movieDetailsGenCont{
+        margin: 0px;
+    }
+    .movieDetailsRat{
+        margin: 0px;
+        font-size: 15px;
+    }
+    .movieDetailsDate{
+        margin: 0px;
+        font-size: 15px;
+    }
+    .movieDetailsStatus{
+        margin: 0px;
+        font-size: 15px;
+    }
+    .movieDetailsLink{
+        font-size: 14px;
+    }
+    .movieDetailsDesc{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (400px<=width<=600px){
+    .backDropImg{
+        width: 100%;
+        height: 320px;
+    }
+    .detailsImageCont{
+        width: 200px;
+        height: 290px;
+    }
+    .posterImg{
+        width: 200px;
+        height: 290px;
+    }
+    .posterCont{
+        width: 100%;
+    }
+    .play{
+        width: 40px;
+        height: 40px;
+    }
+    .movieDetails{
+        width: 100%;
+        top: 165px;
+        align-items: center;
+        flex-direction: column;
+    }
+    .movieDetailsbox1{
+        width: 95%;
+        margin-top: 20px;
+    }
+    .movieDetailsbox11{
+        height: max-content;
+        text-align: center;
+    }
+    .movieDetailsbox12{
+        height: max-content;
+        text-align: center;
+    }
+    .movieDetailsDesc {
+        font-size: 14px;
+    }
+    .detailsBox {
+        height: 710px;
+    }
+    .detailsBackdropImages {
+        width: 180px;
+        height: 120px;
+    }
+    .detailImagesCont{
+        width: 95%;
+    }
+    .detailSimilarTitle{
+        font-size: 18px;
+    }
+    .detailSimilarMov {
+        width: 95%;
+        margin-top: 0px;
+    }
+    .detailSimilarCont{
+        padding-top: 0px;
+        height: 260px;
+    }
+    .productionComp{
+        font-size: 14px;
+        width: 90%;
+    }
+    .moreMovieDetails{
+        font-size: 14px;
+        width: 90%;
+    }
+    .movieDetailsTitle{
+        font-size: 20px;
+    }
+    .movieDetailsTag {
+        font-size: 17px;
+    }
+    .movieDetailsGen{
+        margin: 0px 5px 0px 0px;
+    }
+    .movieDetailsGenCont{
+        margin: 0px;
+        justify-content: center;
+    }
+    .movieDetailsRat{
+        margin: 0px;
+        font-size: 15px;
+    }
+    .movieDetailsDate{
+        margin: 0px;
+        font-size: 15px;
+    }
+    .movieDetailsStatus{
+        margin: 0px;
+        font-size: 15px;
+    }
+    .movieDetailsLink{
+        font-size: 14px;
+    }
+    .movieDetailsDesc{
+        font-size: 12px;
+    }
+}
+@media only screen and (width<=400px){
+    .backDropImg{
+        width: 100%;
+        height: 240px;
+    }
+    .detailsImageCont{
+        width: 190px;
+        height: 270px;
+    }
+    .posterImg{
+        width: 190px;
+        height: 270px;
+    }
+    .posterCont{
+        width: 100%;
+    }
+    .play{
+        width: 40px;
+        height: 40px;
+    }
+    .movieDetails{
+        width: 100%;
+        top: 110px;
+        align-items: center;
+        flex-direction: column;
+    }
+    .movieDetailsbox1{
+        width: 95%;
+        margin-top: 20px;
+    }
+    .movieDetailsbox11{
+        height: max-content;
+        text-align: center;
+    }
+    .movieDetailsbox12{
+        height : max-content;
+        text-align: center;
+    }
+    .movieDetailsDesc {
+        font-size: 14px;
+    }
+    .detailsBox {
+        height: 710px;
+    }
+    .detailsBackdropImages {
+        width: 180px;
+        height: 120px;
+    }
+    .detailImagesCont{
+        width: 95%;
+    }
+    .detailSimilarTitle{
+        font-size: 18px;
+    }
+    .detailSimilarMov {
+        width: 95%;
+        margin-top: 0px;
+    }
+    .detailSimilarCont{
+        padding-top: 0px;
+        height: 260px;
+    }
+    .productionComp{
+        font-size: 14px;
+        width: 90%;
+    }
+    .moreMovieDetails{
+        font-size: 14px;
+        width: 90%;
+    }
+    .movieDetailsTitle{
+        font-size: 20px;
+    }
+    .movieDetailsTag {
+        font-size: 17px;
+    }
+    .movieDetailsGen{
+        margin: 0px 5px 0px 0px;
+    }
+    .movieDetailsGenCont{
+        margin: 0px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .movieDetailsRat{
+        margin: 0px;
+        font-size: 15px;
+    }
+    .movieDetailsDate{
+        margin: 0px;
+        font-size: 15px;
+    }
+    .movieDetailsStatus{
+        margin: 0px;
+        font-size: 15px;
+    }
+    .movieDetailsLink{
+        font-size: 14px;
+    }
+    .movieDetailsDesc{
+        font-size: 12px;
+    }
+}

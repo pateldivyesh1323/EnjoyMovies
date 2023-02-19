@@ -296,7 +296,6 @@
     position: absolute;
     z-index: 0;
 }
-
 .movieDetails {
     position: relative;
     top: 300px;
@@ -305,7 +304,9 @@
     width: 80%;
     padding-bottom: 50px;
 }
-
+.detailsBox{
+    height: 750px;
+}
 .posterCont {
     width: 35%;
     display: flex;
@@ -386,7 +387,11 @@
 .movieDetailsLink1:visited {
     color: white;
 }
-
+.detailsImageCont{
+    position: relative;
+    height: 410px;
+    width: 320px;
+}
 .play {
     width: 70px;
     height: 70px;
@@ -435,7 +440,6 @@
     font-size: 20px;
     font-weight: 600;
     display: flex;
-    justify-content: center;
     align-items: center;
     margin-bottom: 5px;
     flex-wrap: wrap;
@@ -449,6 +453,7 @@
     overflow-x: auto;
     padding-top: 20px;
     height: 380px;
+    column-gap: 20px;
 }
 
 .detailSimilarMov {

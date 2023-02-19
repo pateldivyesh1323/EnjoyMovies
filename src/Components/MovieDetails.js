@@ -57,14 +57,15 @@ export default function MovieDetails() {
         return newDate;
     }
 
+
     return (
-        <div style={{ paddingBottom: "50px" }}>
-            <div style={{ height: "750px" }}>
+        <div className='movieDetailsMain'>
+            <div className='detailsBox'>
                 <div className='detailsCont'>
                     <img src={`https://image.tmdb.org/t/p/original${movieData.backdrop_path}`} alt="BackDrop" className='backDropImg' />
                     <div className='movieDetails'>
                         <div className='posterCont'>
-                            <div style={{ position: "relative", width: "320px", height: "410px" }}>
+                            <div className='detailsImageCont'>
                                 <img src={`https://image.tmdb.org/t/p/original${movieData.poster_path}`} alt="Poster" className='posterImg' />
                                 <a href={trailerLink !== "" ? `https://www.youtube.com/watch?v=${trailerLink}` : ""}><img src={Play} alt="Play Trailer" className='play' /></a></div>
                         </div>
