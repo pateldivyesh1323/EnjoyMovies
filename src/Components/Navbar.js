@@ -83,11 +83,11 @@ export default function Navbar() {
                 <button className='searchButt' type="submit">Search</button>
             </form>
             <div className='menuOption menuOptionCont'>
-                <div className="menuOptionBox" style={{ display: 'none' }}>
-                    <Link className='subMenuItem' to='/'>Now Playing</Link>
-                    <Link className='subMenuItem' to='/popular'>Popular</Link>
-                    <Link className='subMenuItem' to='/toprated'>Top Rated</Link>
-                    <Link className='subMenuItem' to='/upcoming'>Upcoming</Link></div>
+                <div className="menuOptionBox" style={{ display: 'none' }} >
+                    <Link onClick={menuClick} className='subMenuItem' to='/'>Now Playing</Link>
+                    <Link onClick={menuClick} className='subMenuItem' to='/popular'>Popular</Link>
+                    <Link onClick={menuClick} className='subMenuItem' to='/toprated'>Top Rated</Link>
+                    <Link onClick={menuClick} className='subMenuItem' to='/upcoming'>Upcoming</Link></div>
             </div>
         </div>
     )
