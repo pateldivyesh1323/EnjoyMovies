@@ -22,7 +22,6 @@ export default function MovieDetails() {
         let url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${api_key}&append_to_response=images,similar,videos`;
         let data = await fetch(url);
         let parsedData = await data.json();
-        console.log(parsedData);
         setMovieData(parsedData);
         setMovieGen(parsedData.genres);
 
