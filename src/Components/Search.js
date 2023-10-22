@@ -7,9 +7,9 @@ import { useParams } from 'react-router-dom';
 
 export default function Search(props) {
 
-    let {searchKey} = useParams();
+    let { searchKey } = useParams();
 
-    const api_key = "afd9086e3c061313176661d70983f827"
+    const api_key = process.env.API_KEY;
     const [moviesData, setMoviesData] = useState([]);
     const [page, setPage] = useState(1);
     const [totalResult, setTotalResult] = useState(0);
@@ -38,23 +38,23 @@ export default function Search(props) {
     }, [props.category])
 
     const fetchMoreData = async () => {
-        const url = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${searchKey}&page=${page+1}`;
+        const url = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${searchKey}&page=${page + 1}`;
         const data = await fetch(url);
         const parsedData = await data.json();
         setMoviesData(moviesData.concat(parsedData.results));
-        setPage(page+1);
+        setPage(page + 1);
         setTotalResult(parsedData.total_results);
     }
 
     return (
         <>
             <div className="main">
-            <div className="genTitle2">Showing search results for "{searchKey}"</div>
+                <div className="genTitle2">Showing search results for "{searchKey}"</div>
                 <InfiniteScroll
                     dataLength={moviesData.length}
                     next={fetchMoreData}
                     hasMore={totalResult > moviesData.length}
-                    loader={<Spinner/>}
+                    loader={<Spinner />}
                 >
                     <div className="cont">
                         <div className="row">

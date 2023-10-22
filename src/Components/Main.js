@@ -6,7 +6,7 @@ import './style.css'
 import Spinner from './Spinner'
 
 export default function Main(props) {
-    const api_key = "afd9086e3c061313176661d70983f827"
+    const api_key = process.env.API_KEY;
     const [moviesData, setMoviesData] = useState([]);
     const [page, setPage] = useState(1);
     const [totalResult, setTotalResult] = useState(0);
@@ -37,11 +37,11 @@ export default function Main(props) {
     }, [props.category])
 
     const fetchMoreData = async () => {
-        const url = `https://api.themoviedb.org/3/movie/${props.category}?api_key=${api_key}&page=${page+1}`;
+        const url = `https://api.themoviedb.org/3/movie/${props.category}?api_key=${api_key}&page=${page + 1}`;
         const data = await fetch(url);
         const parsedData = await data.json();
         setMoviesData(moviesData.concat(parsedData.results));
-        setPage(page+1);
+        setPage(page + 1);
         setTotalResult(parsedData.total_results);
     }
 
@@ -54,7 +54,7 @@ export default function Main(props) {
                     dataLength={moviesData.length}
                     next={fetchMoreData}
                     hasMore={totalResult > moviesData.length}
-                    loader={<Spinner/>}
+                    loader={<Spinner />}
                 >
                     <div className="cont">
                         <div className="row">

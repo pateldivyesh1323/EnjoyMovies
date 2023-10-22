@@ -7,7 +7,7 @@ import './style.css'
 export default function MovieDetails() {
 
     let { movieId } = useParams();
-    let api_key = "afd9086e3c061313176661d70983f827"
+    const api_key = process.env.API_KEY;
     const [movieData, setMovieData] = useState({});
     const [movieGen, setMovieGen] = useState([]);
     const [trailerLink, setTrailerLink] = useState("");
@@ -104,7 +104,7 @@ export default function MovieDetails() {
                     })
                 }
             </div>
-            {similarMovies.length!==0 && <div className='detailSimilarMov'>
+            {similarMovies.length !== 0 && <div className='detailSimilarMov'>
                 <div className='detailSimilarTitle'>Similar Movies</div>
                 <div className="detailSimilarCont">
                     {
