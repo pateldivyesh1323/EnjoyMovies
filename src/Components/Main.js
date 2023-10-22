@@ -6,7 +6,7 @@ import './style.css'
 import Spinner from './Spinner'
 
 export default function Main(props) {
-    const api_key = process.env.API_KEY;
+    const api_key = process.env.REACT_APP_API_KEY;
     const [moviesData, setMoviesData] = useState([]);
     const [page, setPage] = useState(1);
     const [totalResult, setTotalResult] = useState(0);

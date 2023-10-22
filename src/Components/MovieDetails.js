@@ -7,7 +7,7 @@ import './style.css'
 export default function MovieDetails() {
 
     let { movieId } = useParams();
-    const api_key = process.env.API_KEY;
+    const api_key = process.env.REACT_APP_API_KEY;
     const [movieData, setMovieData] = useState({});
     const [movieGen, setMovieGen] = useState([]);
     const [trailerLink, setTrailerLink] = useState("");
